@@ -1,0 +1,112 @@
+<style>
+j {
+}
+h5 {
+ text-shadow: 0px 0px 5px Black;
+}
+ol {
+ text-align: justify;
+}
+li {
+ text-align: justify;
+}
+p {
+ text-indent: 20px;
+ text-align: justify;
+}
+h2 {
+ border-bottom: 5px solid BurlyWood;
+ padding-bottom: 5px;
+}
+img {
+ border-radius: 20px;
+ box-shadow: 0px 5px 5px LightSlateGray;
+ border: 2px solid DarkSlateBlue; 
+}
+a {
+ color: Brown;
+ text-decoration: none;
+ border-bottom: 1px solid transparent;
+ transition: border-color 0.3s;
+ padding: 2px;
+}
+h3 {
+ text-align: center;
+ background: BurlyWood;
+ border: 2px solid DarkSlateBlue;
+ border-radius: 20px;
+ box-shadow: 0px 5px 5px LightSlateGray;
+}
+header {
+ border-radius: 30px;
+}
+body {
+ background-image: url(magik.jpg);
+ font-family: 'segoe print', serif;
+}
+video {
+ border-radius: 20px;
+ box-shadow: 0px 5px 5px LightSlateGray;
+ display: block;           
+ margin-left: auto;
+ margin-right: auto;
+}
+.container {
+ max-width: 800px;
+ margin: 20px auto;
+ border-radius: 30px;
+ padding: 30px;
+ box-shadow: 0px 5px 30px Indigo;
+ background: BlanchedAlmond;
+}
+.shadow {
+ text-shadow: 4px 2px 3px LightSlateGray;
+}
+.zone {
+ padding: 20px;
+ border-radius: 20px;
+ margin: auto;
+ background: Bisque;
+ border: 2px solid DarkSlateBlue;
+ box-shadow: 0px 5px 5px LightSlateGray;
+}
+.no-styles {
+ border-radius: none !important; /* Отменяем border */
+ box-shadow: 0 0 0 !important;   /* Отменяем margin */
+ border: 0 !important; 
+.nona {
+ text-decoration: none !important;
+ border-bottom: 1px solid transparent !important;
+ transition: border-color 0.3s !important;
+ padding: 1px !important;
+ color: black !important;
+}
+}
+.image {
+ text-align: center;
+}
+.hover-container {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+}  
+.tooltip {
+ position: absolute;
+ bottom: 120%; /* выше текста */
+ left: 50%;
+ transform: translateX(-50%);
+ background: RosyBrown;
+ color: Blue;
+ padding: 5px 10px;
+ border-radius: 20px;
+ white-space: nowrap;
+ opacity: 0;
+ visibility: hidden;
+ transition: opacity 0.3s;
+ border: 2px solid DarkSlateBlue; 
+}
+.hover-container:hover .tooltip {
+ opacity: 1;
+ visibility: visible;
+}
+</style>
