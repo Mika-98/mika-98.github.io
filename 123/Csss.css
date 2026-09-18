@@ -76,6 +76,7 @@ header {
 body {
  background-image: url(magik.jpg);
  font-family: 'segoe print', serif;
+ background-size: cover;
 }
 video {
  border-radius: 20px;
