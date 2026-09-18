@@ -1,0 +1,197 @@
+<style>
+j {
+}
+aside {
+ position: fixed;
+ top: -3px;   
+ left: -4px;                
+ width: 155px;
+ padding: 7px;
+ background-color: Bisque;
+ border: 3px solid Saddlebrown;
+ box-shadow: 0px 5px 30px blue;
+}
+.sidebar a {
+ color: black;
+ text-decoration: none;
+ transition: color 0.3s;
+ transition: right 0.4s ease;
+}
+.sidebar a:hover {
+    color: mediumblue;   /* Короче, hover - подтип, срабатывающий при наведении и меняющий 
+                         элементы, указанны после фигурной скобки. Указывается после
+                         любого типа, через двоеточие. Из блока выше есё интересен момент
+                         Transition - если свойства элемента поменяются - они поменяются плавно,
+                         за указанное время.*/
+}
+h4 {
+ border-bottom: 5px dashed black;
+ margin: 2px;
+}
+h7 {
+ border-bottom: 5px solid burlywood;	
+}
+h5 {
+ text-shadow: 0px 0px 5px Black;
+}
+h6 {
+ text-shadow: 0px 0px 7px White; 
+}
+ol {
+ text-align: justify;
+}
+li {
+ text-align: justify;
+}
+p {
+ text-indent: 20px;
+ text-align: justify;
+}
+h2 {
+ border-bottom: 5px solid burlywood;
+ padding-bottom: 5px;
+}
+img {
+ border-radius: 20px;
+ box-shadow: 0px 5px 5px LightSlateGray;
+ border: 2px solid DarkSlateBlue; 
+}
+a {
+ color: black;
+ text-decoration: none;
+ border-bottom: 1px solid transparant;
+ transition: border-color 0.3s;
+ padding: 2px;
+}
+h3 {
+ text-align: center;
+ background: BurlyWood;
+ border: 2px solid SaddleBrown;
+ border-radius: 20px;
+ box-shadow: 0px 5px 5px LightSlateGray;
+}
+header {
+ border-radius: 30px;
+}
+body {
+ background-image: url(magik.jpg);
+ font-family: 'segoe print', serif;
+}
+video {
+ border-radius: 20px;
+ box-shadow: 0px 5px 5px LightSlateGray;
+ display: block;           
+ margin-left: auto;
+ margin-right: auto;
+}
+.container {
+ width: 800px;
+ margin: 20px auto;
+ border-radius: 30px;
+ padding: 30px;
+ box-shadow: 0px 5px 30px blue;
+ background: Bisque;
+}
+.shadow {
+ text-shadow: 4px 2px 3px LightSlateGray;
+}
+.zone {
+ padding: 20px;
+ border-radius: 20px;
+ margin: auto;
+ background: Bisque;
+ border: 2px solid SaddleBrown;
+ box-shadow: 0px 5px 5px LightSlateGray;
+}
+.no-styles {
+ border-radius: none !important; /* Отменяем border */
+ box-shadow: 0 0 0 !important;   /* Отменяем margin */
+ border: 0 !important; 
+.nona {
+ text-decoration: none !important;
+ border-bottom: 1px solid transparent !important;
+ transition: border-color 0.3s !important;
+ padding: 1px !important;
+ color: black !important;
+}
+}
+.image {
+ text-align: center;
+}
+.hover-container {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+}  
+.tooltip {
+ position: absolute;
+ bottom: 120%; /* выше текста */
+ left: 50%;
+ transform: translateX(-50%);
+ background: RosyBrown;
+ color: Blue;
+ padding: 5px 10px;
+ border-radius: 20px;
+ white-space: nowrap;
+ opacity: 0;
+ visibility: hidden;
+ transition: opacity 0.3s;
+ border: 2px solid DarkSlateBlue; 
+}
+.hover-container:hover .tooltip {
+ opacity: 1;
+ visibility: visible;
+}
+.sidebar-toggle {
+    display: none;
+}
+
+/* --- Кнопка-переключатель --- */
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    background: #333;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1001;                /* поверх сайдбара */
+    transition: background 0.3s ease, transform 0.15s ease;
+}
+
+.toggle-btn:hover {
+    background: navy;
+}
+
+.toggle-btn:active {
+    transform: scale(0.90);
+}
+
+/* --- Сайдбар --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100vh;
+    padding: 25px 25px 25px;      /* сверху отступ под кнопку */
+    background: bisque;
+    border: 4px solid saddlebrown;
+    box-shadow: 0px -5px 30px blue;
+    z-index: 1000;
+    transform: translateX(-101%);
+    transition: transform 0.35s ease;
+}
+
+/* --- Магия: когда чекбокс отмечен — сайдбар выезжает --- */
+.sidebar-toggle:checked ~ .sidebar {
+    transform: translateX(-2%);
+}
+</style>
